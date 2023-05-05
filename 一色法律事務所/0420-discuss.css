@@ -1,0 +1,501 @@
+:root{
+    --bg-color: #ebeae9;
+    --color-black: #444;
+    --color-white: #fff;
+}
+
+* ,
+* ::before,
+* ::after {
+    box-sizing: border-box;
+} 
+
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--color-black);
+    font-size: 1.4rem;
+    /* 寫rem的目的是讓視窗大小改變的時候字體也會跟著改變 */
+    font-family: sans-serif;
+    /* 無襯線屬性 */
+    /* overflow-y: hidden;
+    讓畫面不能滾 */
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p {
+    line-height: 2;
+}
+
+/* common */
+.logo {
+    font-size: 2.4rem;
+    font-weight: normal;
+    /* 不要粗體 */
+    letter-spacing: 0.1rem;
+    /* 字間距 */
+}
+
+[class^="btn-"]{
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-black {
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+}
+
+.btn-black:hover {
+    background-color: var(--color-black) ;
+    color: var(--color-white);
+}
+
+.btn-white {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.btn-white:hover {
+    background-color: var(--color-white) ;
+    color: var(--color-black);
+} 
+
+.animated-links > .link-item > a {
+    /* a:not([class^="btn-"]) */
+    position: relative;
+    padding: 0.3rem 0;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.animated-links > .link-item > a::before{
+    /* a:not([class^="btn-"]) */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    transform: scaleX(0);
+    border-bottom: 1px solid var(--color-black);
+    transition: transform 0.4s;
+    /* transform本身屬性基準點就是中心點 */
+}
+
+.animated-links > .link-item > a:hover::before {
+    /* a:not([class^="btn-"]) */
+    transform: scaleX(1);
+    /* 縮放比例 1代表全部 */
+}
+
+.section-content-block {
+    position: relative;
+    z-index: 1;
+    /* z-index一定要設position才有效果  然後設這欄是因為文字會被模糊  讓文字位置高一點 */
+}
+
+.section-content-block .title-eng {
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.section-content-block .title-jp {
+    margin-bottom: 2.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.section-content-block .section-content{
+    margin-bottom: 2.4rem;
+    letter-spacing: 0.1rem;
+}
+
+
+
+/* Utility Class */
+.container{
+    max-width: 144rem;
+    margin: 0 auto;
+    /* auto是置中(左右) */
+    padding: 0 6rem;
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.mask {
+    position: relative;
+}
+
+.mask::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.111);
+    backdrop-filter: blur(3px);
+}  
+.page-section {
+    margin-bottom: 15rem;
+    display: flex;
+}
+
+.page-section > div {
+    flex-grow: 1;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.w-45{
+    flex-shrink: 0;
+    /* 不能縮水 */
+    width: 45%;
+}
+
+.coverfit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gap-50 {
+    gap: 5rem;
+}
+
+/* Header */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-bottom: 2rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.117);
+    z-index: 9999;
+}
+
+.header-upperArea {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+
+.main-header .header-upperArea > :first-child {
+    margin-right: auto;
+}
+
+.main-header .header-upperArea .drop-down {
+    margin-left: 2rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.header-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav > ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav > ul > li {
+    margin-left: 2rem;
+}
+
+
+
+/* main */
+
+/* main-visual */
+.main-visual {
+    position: relative;
+}
+
+.main-visual .section-content-block {
+    position: absolute;
+    top: 50%;
+    left: 6rem;
+    transform: translateY(-50%);
+}
+
+.main-visual-movie {
+    overflow: hidden;
+
+    /* TO DO 查如何設想應式高度 */
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner{
+    height: 45rem;
+    background: url(./main-visual.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.banner .section-content-block {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* news */
+.news .news-item:not(:last-child){
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item .newsItem-info {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.news-item .newsItem-info .date {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 1px solid var(--color-black);
+    letter-spacing: 0.2rem;
+}
+
+.news-content a {
+    color: var(--color-black);
+}
+
+
+/* footer */
+
+.main-footer {
+    margin-top: auto;
+    padding: 8rem 0 4rem;
+    background-color: #e3e2e0;
+    font-size: 1.2rem;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.footer-left {
+    flex-shrink: 0;
+    /* 讓內容不被壓縮 shrink是縮水的意思 */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left .copyright {
+    margin-top: auto;
+    color: #a09f9f;
+}
+
+.footer-right {
+    width: 76rem;
+}
+
+.footer-right .copyright {
+    display: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    /* 容許換行不擠壓 如果是 shrink就是不壓縮但沒要換行 所以會爆掉 */
+    list-style: none;
+    margin-bottom: 4rem;
+    padding-bottom: 3.4rem;
+    border-bottom: 1px solid rgb(111, 110, 110);
+}
+
+.footer-links li {
+    width: calc(100% / 3);
+    margin-bottom: 2rem;
+}
+
+.footer-right .contact-info dl {
+    display: flex;
+    /* 讓 dd和 dt並排 */
+    margin-bottom: 1rem;
+}
+
+.footer-right .contact-info dl > dt {
+    width: 7rem;
+    margin-right: 0.8rem;
+    text-transform: uppercase; 
+    /* 字體大寫 */
+}
+
+
+
+/* RWD */
+/* laptop */
+@media screen and (max-width: 1024px){
+    .container{
+        padding: 0 3rem;
+    }
+}
+
+/* notepad */
+@media screen and (max-width: 768px){
+    /* Common */
+    .page-section {
+        margin-bottom: 5rem;
+    }
+
+    .page-section > div {
+        flex-direction: column;
+    }
+
+    .section-content-block {
+       width: unset;
+       align-self: stretch;
+       /* 原本寬度設 45%  拿掉以後就會自己排列 */
+       /* 也可以改設 width 100% */
+       order: -1;
+       /* 讓文字跟圖片調位子 */
+    }
+
+    /* Header */
+    .main-header {
+        padding-bottom: 3rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        width: 3em;
+        height: 3rem;
+    }
+
+    .hamburger > .bar {
+        height: 1px;
+        background-color: #444;
+        transition: 0.4s;
+    }
+
+    .hamburger.active > .bar:first-child {
+        transform: rotate(-45deg) translateY(0.7rem);
+    }
+
+    .hamburger.active > .bar:last-child {
+        transform: rotate(45deg) translateY(-0.7rem);
+    }
+
+    /* mobile-menu */
+    .mobile-menu {
+        position: fixed;
+        left: 100%;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        padding: 20rem 2rem;
+        background-color: var(--bg-color);
+        transition: 0.4s;
+    }
+
+    .mobile-menu.active {
+        left: 0;
+    }
+
+    .mobile-menu .main-nav {
+        display: block;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgb(199, 199, 199);
+    }
+
+    .mobile-menu .main-nav ul {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+
+    .header-upperArea .drop-down {
+        display: none;
+    }
+    .main-nav {
+        display: none;
+    }
+
+    .section-content-block .title-eng {
+        margin-bottom: 0.5rem;
+    }
+
+    /* main */
+    .main-visual .section-content-block {
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%,-50%);
+    }
+
+
+    /* footer */
+    .footer-wrap {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-links li {
+        width: 50%;
+    }
+
+    .contact-info {
+        margin-bottom: 3rem;
+    }
+
+    .footer-right .copyright {
+        display: block;
+    }
+
+    .footer-left .copyright {
+        display: none;
+    }
+}
