@@ -46,6 +46,7 @@ h3 {
 
 
 p {
+    font-size: 1.7rem;
     line-height: 2.0;
     /* font-weight: 550; */
     text-align: justify;
@@ -53,7 +54,7 @@ p {
 }
 
 .p-bold {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 900;
     margin-bottom: 1rem;
 }
@@ -629,7 +630,7 @@ p {
 /* main-contact */
 .main-contact {
     border-radius: 80px;
-    padding: 7.2%;
+    padding: 7.2% 7.2% 5% 7.2%;
     background-image: url(./0427_images/main-conta.jpg);
     background-size: cover;
 }
@@ -703,10 +704,11 @@ p {
     margin-top: 3rem;
 }
 
-.con-center {
+.contact-center {
     background-color: var(--bg-color);
-
+    margin-bottom: 10rem;
 }
+/* !!!!!!!mb10 none */
 
 .contact-serves , .contact-notice {
     display: flex;
@@ -729,11 +731,14 @@ p {
     font-weight: 700;
     border-radius: 100px;
     background-color: var(--color-brown);
+    
 }
 
 .con-btn:nth-child(1) {
     border-right: 1px solid #fff;
 }
+
+/* !!!!!!!! */
 
 .con-btn > a {
     padding: 0 5rem;
@@ -762,6 +767,92 @@ p {
     text-align: center;
     margin-top: 10rem;
     color: #fff;
+}
+
+/* .contact-buttom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5236239a;
+} */
+
+.contact-buttom > div {
+    width: 33%;
+    border-right: 1px solid #fff;
+    padding: 5rem;
+    text-align: center;
+}
+
+.contact-buttom > div:nth-child(3){
+    border-right: none;
+}
+
+.con-intro p {
+    text-align: center;
+}
+
+.contact-buttom h3 {
+    margin-bottom: 2rem;
+}
+
+/* .con-line{
+    background-image: url(./0427_images/icon_line.svg);
+    background-size: 34px;
+    background-repeat: no-repeat;
+} */
+
+.icon-line::before {
+    content: '';
+    background-image: url(./0427_images/icon_line.svg);
+    background-size: 34px;
+    background-repeat: no-repeat;
+}
+
+/* !!!!!!! */
+
+.icon-area p {
+    margin-bottom: 3rem;
+}
+
+.contact-buttom a {
+    /* text-align: center; */
+    margin: auto;
+}
+
+
+
+/* main-shop-introduce */
+.main-shop-introduce {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 15rem;
+    padding: 0 17rem;
+}
+
+
+
+.shop-left {
+    width: 53.4%;
+}
+
+.shop-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-right {
+    width: 46.6%;
+    padding: 7.5%;
+}
+
+.main-shop-introduce a {
+    width: 32rem;
+    margin-left: auto;
 }
 
 
