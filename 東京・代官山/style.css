@@ -125,6 +125,7 @@ p {
 .main-header > .main-navi {
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
 }
 
 .main-header > .main-navi > ul {
@@ -144,7 +145,7 @@ p {
 }
 
 .navi-button {
-    margin-left: 30rem;
+    margin-left: auto;
 }
 
 .navi-button > li > a {
@@ -160,10 +161,10 @@ p {
 
 .navi-sub {
     display: flex;
-    position: sticky;
+    position: fixed;
     justify-content: space-between;
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     width: 100px;
@@ -734,7 +735,7 @@ p {
     
 }
 
-.con-btn:nth-child(1) {
+.con-btn >:nth-child(1) {
     border-right: 1px solid #fff;
 }
 
@@ -828,8 +829,7 @@ p {
 .main-shop-introduce {
     display: flex;
     justify-content: space-between;
-    
-    margin-top: 15rem;
+    margin: 15rem 0 15rem 0;
     padding: 0 17rem;
 }
 
@@ -856,5 +856,81 @@ p {
 }
 
 
+/* main-faq */
+.main-faq {
+    background-color: var(--color-dark-yellow);
+    padding: 15rem;
+}
+
+.main-faq > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 
+.main-faq li {
+    width: 45%;
+}
+
+.question-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: baseline;
+    position: relative;
+    border-top: 1px solid var(--color-dark-green);
+    border-bottom: 1px solid var(--color-dark-green);
+    padding: 3rem 0 3rem 8rem;
+}
+
+.question-section::before {
+    content: 'Q';
+    color: #ede9e0;
+    background: var(--color-dark-green);
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    border-radius: 5rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    cursor: pointer;
+}
+
+.icon-plus {
+    width: 2rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.answer-section {
+    position: relative;
+    padding-left: 8rem;
+}
+
+.answer::before {
+    content:'A' ;
+    display: block;
+    text-align: center;
+    color: #ede9e0;
+    background: var(--color-brown);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    cursor: pointer;
+}
+
+.answer {
+    font-size: 1.4rem;
+    padding: 3.5rem 0 3.5rem 0;
+}
+
+.main-faq > a {
+    margin: auto;
+    margin-top: 3.5rem;
+}
