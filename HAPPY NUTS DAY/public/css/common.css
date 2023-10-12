@@ -1,0 +1,156 @@
+:root{
+    --bg-color: #F8F6F2;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+}
+
+.max-container{
+    max-width: 1440px;
+    padding: 0 5rem;
+    margin: auto;  
+}
+
+/* ///// */
+/* common style */
+
+h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+.title-p{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.border-radius{
+    border: 1px solid;
+    border-radius: 60px;
+    padding: 1.2rem 3rem;
+}
+
+
+
+/* ///// */
+/* /////header */
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    /* z-index: 9999; */
+    padding: 4rem;
+}
+
+.main-nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.main-nav > ul > li {
+    cursor: pointer;
+    margin-right: 5rem;
+}
+
+.main-nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart{
+    background-image: url(../image/cart.svg);
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+}
+
+
+/* /////footer */
+
+.main-footer{
+    padding: 0rem 5rem;
+}
+
+.info-f{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.logo-f{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.contact-f{
+    display: flex;
+    justify-content: space-between;
+    align-self:flex-end;
+}
+
+.main-footer .word {
+    margin-bottom: 2rem;
+}
+
+.main-footer .word p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.main-footer .media > ul{
+    display: flex;
+    list-style: none;
+}
+
+.main-footer .media > ul >li {
+    margin-right: 2rem;
+}
+
+.main-footer > .content-f {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer >  .content-f > ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-footer > .content-f > ul >li {
+    margin-right: 2rem;
+}
+
+.main-footer a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.main-footer a:hover{
+    color: #5a5a59;
+}
