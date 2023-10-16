@@ -1,40 +1,47 @@
+@import url(./utils.css);
+
 :root{
     --bg-color: #F8F6F2;
+    --color-primary:rgb(0, 0, 0);
+    --color-secondary:rgba(0, 0, 0, 0.5);
+    --layout-padding: 4rem;
 }
 
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-}
-
-*{
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
 html {
     font-size: 62.5%;
-    
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.6rem; 
+    font-weight: 700;
+    color: var(--color-primary);
     background-color: var(--bg-color);
     font-family: sans-serif;
 }
 
-.max-container{
-    max-width: 1440px;
-    padding: 0 5rem;
-    margin: auto;  
+a{
+    color: var(--color-primary);
 }
 
-/* ///// */
-/* common style */
+/*unused*/
+
+
 
 h1{
     font-size: 3.2rem;
     font-weight: 700;
+    margin-bottom: 3.3rem;
 }
 
 h2{
@@ -43,16 +50,44 @@ h2{
     line-height: 40px;
 }
 
-.title-p{
-    font-size: 1.6rem;
-    font-weight: 700;
+
+/* ///// */
+/* common style */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 4rem;
 }
 
-.border-radius{
-    border: 1px solid;
-    border-radius: 60px;
-    padding: 1.2rem 3rem;
+.title-p {
+    font-size: 1.6rem;
+   
 }
+.btn {
+    display: inline-flex;
+    gap: 1rem;
+    /* align-items: center; */
+    border: 1px solid var(--color-primary);
+    border-radius: 9999px; 
+    padding: 1.2rem 3rem;
+    cursor: pointer;
+}
+
+.text-light {
+    color: var(--color-secondary);
+    opacity: 0.5;
+}
+
+.menu-list > * {
+    transition: 0.4s;
+}
+
+.menu-list > *:hover{
+    opacity: 0.5;
+}
+
+
 
 
 
@@ -62,95 +97,104 @@ h2{
 .main-header{
     display: flex;
     justify-content: space-between;
-    /* position: fixed; */
+    position: sticky;
     /* z-index: 9999; */
-    padding: 4rem;
+    padding: 4rem var(--layout-padding) 0;
 }
 
 .main-nav > ul {
     display: flex;
     align-items: center;
     list-style: none;
+    gap: 2rem;
 }
 
 .main-nav > ul > li {
-    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+/* .main-nav > ul >li :not(:last-child){
     margin-right: 5rem;
+} */
+
+
+
+/* /////main */
+
+.container >.side-bar > ul {
+    list-style: none;
 }
 
-.main-nav > ul > li > a {
-    text-decoration: none;
-    color: black;
+.container >.side-bar > ul > li {
+    margin-bottom: 1.5rem;
 }
 
-.cart{
-    background-image: url(../image/cart.svg);
-    background-repeat: no-repeat;
-    padding-left: 3rem;
+.container > .side-bar > ul > li > a:hover{
+    color: var(--color-secondary);
+    opacity: 0.5;
 }
-
 
 /* /////footer */
 
-.main-footer{
-    padding: 0rem 5rem;
+.main-footer {
+    margin-top: auto;
 }
 
-.info-f{
-    margin-bottom: 2rem;
-    border-bottom: 1px solid rgb(175, 175, 175);
+.top-footer,.bottom-footer{
+    padding: 0 var(--layout-padding);
 }
 
-.logo-f{
-    cursor: pointer;
+.main-footer > hr {
+    margin: 2rem 0;
+}
+
+.main-footer > :last-child {
+    padding-bottom: 3rem;
+}
+
+.logo{
+    display: block;
     margin-bottom: 2rem;
 }
-.contact-f{
+.main-footer .contact{
     display: flex;
     justify-content: space-between;
-    align-self:flex-end;
+    align-items:flex-end;
 }
 
-.main-footer .word {
-    margin-bottom: 2rem;
-}
-
-.main-footer .word p{
+.main-footer .info {
     font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
 }
 
 .main-footer .media > ul{
     display: flex;
+    gap: 2rem;
     list-style: none;
 }
 
-.main-footer .media > ul >li {
-    margin-right: 2rem;
+.bottom-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.main-footer > .content-f {
+.footer-link {
     display: flex;
     justify-content: space-between;
 }
 
-.main-footer >  .content-f > ul {
+.footer-link {
     display: flex;
     list-style: none;
 }
 
-.main-footer > .content-f > ul >li {
+.footer-link >li {
     margin-right: 2rem;
 }
 
-.main-footer a {
+.footer-link a {
     font-size: 1.3rem;
-    font-weight: 700;
     text-decoration: none;
-    color: black;
 }
 
-.main-footer a:hover{
-    color: #5a5a59;
-}

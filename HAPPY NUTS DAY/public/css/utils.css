@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.txt-deco-none{
+    text-decoration: none;
+}
