@@ -44,7 +44,7 @@ h1{
     margin-bottom: 3.3rem;
 }
 
-h2{
+.h2{
     font-size: 2.6rem;
     letter-spacing: 1px;
     line-height: 40px;
@@ -64,7 +64,8 @@ h2{
     font-size: 1.6rem;
    
 }
-.btn {
+
+.btn-normal {
     display: inline-flex;
     gap: 1rem;
     /* align-items: center; */
@@ -106,7 +107,7 @@ h2{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .main-nav > ul > li {
@@ -117,7 +118,104 @@ h2{
     margin-right: 5rem;
 } */
 
+.sub-nav{
+    height: 100%;
+    height: vh100;
+    padding: 4rem 4rem 3.5rem 4.8rem;
+    border-left: 1px solid rgb(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+    position: relative;
+    top: 0;
+    right: 0;
+    position: fixed;
+    /* display: none; */
+    /* display: flex;
+    flex-direction: column; */
+}
 
+.sub-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15rem;
+    gap: 2rem;
+}
+
+.sub-top > .sub-personality > a{
+    margin-right: 3rem;
+}
+
+.sub-top > .btn-close {
+    display: inline-flex;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 9999px;
+    padding: 1.2rem 3rem;
+    cursor: pointer;
+}
+
+.sub-top > .btn-close:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.sub-info, .sub-social {
+    list-style: none;
+}
+
+.sub-info > .sub-list1 a, .sub-list2 a{
+    text-decoration: none;
+}
+
+.sub-middle {
+    padding: 0 20rem 0rem 0;
+    margin-bottom: 5rem;
+}
+
+.sub-list1 {
+    margin-bottom: 1.5rem;
+}
+
+.sub-middle > .sub-info > .sub-list1 > a{
+    font-size: 2.6rem;
+    letter-spacing: 0.52px;
+    line-height: 1;
+}
+
+.sub-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.sub-social {
+    margin-bottom: 17rem;
+}
+
+.sub-list2 {
+    margin-bottom: 1.2rem;
+}
+
+.sub-bottom {
+    margin-bottom: 1.5rem;
+}
+
+.sub-bottom > .sub-social > .sub-list2 > a{
+    font-size: 1.5rem;
+    letter-spacing: -0.6px;
+    line-height: 1;
+    color: var(--color-secondary);
+}
+
+.sub-end > .sub-media > a {
+    margin-right: 1.2rem;
+}
+
+.sub-end > p {
+    font-size: 1.1rem;
+    line-height: 1;
+}
 
 /* /////main */
 
