@@ -41,7 +41,6 @@ a{
 h1{
     font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 3.3rem;
 }
 
 .h2{
@@ -219,8 +218,13 @@ h1{
 
 /* /////main */
 
+.side-bar > div > p {
+    display: none;
+}
+
 .container >.side-bar > ul {
     list-style: none;
+    margin-top: 3.5rem;
 }
 
 .container >.side-bar > ul > li {
@@ -299,7 +303,7 @@ h1{
 
 /* RWD */
 /* notepad */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
 
     /* common style */
     .container {
@@ -328,10 +332,6 @@ h1{
 
     /* header */
 
-    /* .sub-nav {
-        display: none;
-    } */
-
     .main-header {
         padding: 1.8rem 1rem 0 2rem;
     }
@@ -357,6 +357,7 @@ h1{
     .sub-nav {
         width: 100%;
         padding: 1.8rem 1.8rem 1.8rem 2.5rem;
+        display: none;
     }
 
     .sub-nav > .sub-top {
@@ -389,7 +390,7 @@ h1{
     }
 
     .sub-social {
-        margin-bottom: 38rem;
+        margin-bottom: 35rem;
     }
 
     .sub-list2 {
@@ -399,10 +400,26 @@ h1{
 
 
     /* main */
-    .container > .side-bar > h1 {
+    .container > .side-bar h1 {
         font-size: 2.6rem;
         letter-spacing: 0.52px;
         line-height: 3.8rem;
+    }
+
+    .side-bar > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-right: 3rem;
+    }
+
+    .side-bar > div > p {
+        display: block;
+    }
+
+    .lead-list {
+        display: none;
+        margin-top: 3.3rem;
     }
 
     /* footer */
@@ -465,8 +482,20 @@ h1{
     .bottom-footer > p {
         font-size: 1.1rem
     }
+
+
+
+    /* phone */
+    @media screen and (max-width: 414px){
+
+        .sub-middle {
+            padding: 0;
+        }
+
+        .sub-social {
+            margin-bottom: 23rem;
+        }
+
+    }
     
-
-
-
 }
