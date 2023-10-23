@@ -1,0 +1,139 @@
+/* side-nav */
+.side-nav{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    min-width: 42rem;
+    height: 100%;
+    padding: 4rem 4rem 3.5rem 4.8rem;
+    border-left: 1px solid rgb(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+    position: relative;
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: none;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav a {
+    text-decoration: none;
+}
+
+.side-nav > .top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 15rem; */
+    /* gap: 2rem; */
+}
+
+.top-menu > .menu {
+    display: flex; /*讓裡面的元素 a有 block屬性*/
+    gap: 3rem;
+    margin-right: 1.5rem;
+}
+
+.top-menu > .menu > li > a {
+    padding: 1rem 0;
+}
+
+.main-menu {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* .main-menu > li:not(:last-child){
+    margin-bottom: 1.5rem;
+} *//*main-menu寫 display grid gap:1.5rem就可以解決*/
+
+.main-menu > li > a {
+    font-size: 2.6rem;
+    letter-spacing: 0.52px;
+    line-height: 1;
+}
+
+.sub-menu {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* .sub-menu > li:not(:last-child) {
+    margin-bottom: 1.2rem;
+} *//*main-menu寫 display grid gap:1.5rem就可以解決*/
+
+.sub-menu > li > a {
+    font-size: 1.5rem;
+    letter-spacing: -0.6px;
+    line-height: 1;
+    color: var(--color-secondary);
+}
+
+.side-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+    margin-bottom: 1.5rem;
+}
+
+.side-bottom > .media > a {
+    margin-right: 1.2rem;
+}
+
+.side-bottom > p {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+
+/* RWD */
+/* notepad */
+@media screen and (max-width: 834px) {
+    .side-nav {
+        width: 100%;
+        padding: 1.8rem;
+        padding-left: 2.5rem;
+        /* display: none; */
+    }
+
+    .side-nav > .top-menu {
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin-bottom: 10rem;
+    }
+
+    .side-nav > .top-menu .menu {
+        gap: 1.5rem;
+    }
+
+    .side-middle {
+        margin-bottom: 3.2rem;
+    }
+    
+    .sub-menu {
+        gap: 0.7rem;
+    }
+
+    .sub-menu > li > a  {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+        line-height: 0.5;
+    }
+    
+}
+
+/* phone */
+@media screen and (max-width: 414px){
+    .side-middle {
+        padding: 0;
+    }
+
+    .sub-menu {
+        margin-bottom: 23rem;
+    }
+    
+}

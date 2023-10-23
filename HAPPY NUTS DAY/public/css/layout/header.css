@@ -1,0 +1,53 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    /* z-index: 9999; */
+    padding: 4rem var(--layout-padding) 0;
+}
+
+.main-nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+}
+
+
+/* .main-nav > ul > li {
+    margin-right: 1.5rem;
+} */
+
+/* .main-nav > ul >li :not(:last-child){
+    margin-right: 5rem;
+} */
+
+
+
+/* RWD */
+/* notepad */
+@media screen and (max-width: 834px) {
+    .main-header {
+        padding: 1.8rem 1rem 0 2rem;
+    }
+
+    .main-header > .logo {
+        width: 5.1rem;
+    }
+    
+    .main-header > .logo > img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* phone */
+@media screen and (max-width: 414px){
+
+
+}

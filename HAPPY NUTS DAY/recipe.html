@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECIPE ｜ HAPPY NUTS DAY</title>
+    <title>GIFT ｜ HAPPY NUTS DAY</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="./public/css/common.css">
 </head>
-
 <body>
 
     <header class="main-header">
@@ -17,42 +16,87 @@
         </div>
         <nav class="main-nav">
             <ul class="menu-list">
-                <li ><a class="txt-deco-none" href="">MY ACCOUNT</a></li>
-                <li ><a class="txt-deco-none" href="">CART</a></li>
-                <li >
-                    <a class="btn txt-deco-none" href="" >
+                <li class="show-only-pc" ><a  href="">MY ACCOUNT</a></li>
+                <li class="text-list-md" ><a  href="">CART</a></li>
+                <li class="show-only-pc">
+                    <a class=".btn" href="" >
                         ONLINE STORE
                         <img src="./public/image/cart.svg" alt="">
                     </a></li>
-                <li>
-                    <div class="btn txt-deco-none">
+                <li class="text-list-md">
+                    <div class="btn">
                         MENU  
                         <i class="fa-solid fa-plus"></i>
                     </div>
                 </li>
             </ul>
         </nav>
+
+        <nav class="side-nav">
+            <div class="top-menu">
+                <ul class="menu menu-list">
+                    <li> <a class="text-list-md" href="">MY ACCOUNT</a></li>
+                    <li><a class="text-list-md" href="">CART</a></li>
+                </ul>
+                <button class="btn btn-black">
+                    CLOSE  
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </div>
+
+            <div class="side-middle">
+                <ul class="main-menu menu-list">
+                    <li><a href="./online store.html">ONLINE STORE</a></li>
+                    <li><a href="./gift service.html">GIFT SERVICE</a></li>
+                    <li><a href="./journal.html">JOURNAL</a></li>
+                    <li><a href="./recipe.html">RECIPE</a></li>
+                    <li><a href="./factory.html">FACTORY</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./store list.html">STORE LIST</a></li>
+                    <li><a href="./news.html">NEWS</a></li> 
+                </ul>
+                <ul class="sub-menu menu-list">
+                    <li><a href="">ショッピングガイド</a></li>
+                    <li><a href="">会社概要</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                    <li><a href="">特定商取引法に基づく表記</a></li>
+                    <li><a href="">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+
+            <div class="side-bottom">
+               <div class="media">
+                        <a href=""><img src="./public/image/facebook.svg" alt=""></a>
+                        <a href=""><img src="./public/image/instagram.svg" alt=""></a>
+                </div>
+                <p class="copyright">© 2023 HAPPY NUTS DAY</p>
+            </div>
+
+        </nav>
     </header>
 
     <main class="container">
         <div class="side-bar">
-            <h1>GIFT SERVICE</h1>
-            <ul>
-                <li><a class="txt-deco-none" href="">ALL</a></li>
-                <li><a class="txt-deco-none" href="">麺</a></li>
-                <li><a class="txt-deco-none" href="">パン</a></li>
-                <li><a class="txt-deco-none" href="">スイーツ</a></li>
-                <li><a class="txt-deco-none" href="">和食</a></li>
-                <li><a class="txt-deco-none" href="">洋食</a></li>
-                <li><a class="txt-deco-none" href="">中華</a></li>
-                <li><a class="txt-deco-none" href="">エスニック</a></li>
-                <li><a class="txt-deco-none" href="">ドレッシング</a></li>
+            <div class="lead">
+                <h1>RECIPE</h1>
+                <p>ALL <img src="./public/image/arrow.svg" alt=""></p>
+            </div>
+            <ul class="lead-list">
+                <li class="text-lg text-md show-only-pc"><a href="">ALL</a></li>
+                <li class="text-lg text-md"><a href="">麺</a></li>
+                <li class="text-lg text-md"><a href="">パン</a></li>
+                <li class="text-lg text-md"><a href="">スイーツ</a></li>
+                <li class="text-lg text-md"><a href="">和食</a></li>
+                <li class="text-lg text-md"><a href="">洋食</a></li>
+                <li class="text-lg text-md"><a href="">中華</a></li>
+                <li class="text-lg text-md"><a href="">エスニック</a></li>
+                <li class="text-lg text-md"><a href="">ドレッシング</a></li>
             </ul>
         </div>
     </main>
 
     <footer class="main-footer">
-        <div class="info top-footer">
+        <div class="top-footer">
             <a class="logo" href="">
                 <img src="./public/image/logo_f.svg" alt="">
             </a>
@@ -78,9 +122,8 @@
                 <li><a href="">主要原材料産地情報</a></li>
                 <li><a href="">製造所固有記号</a></li>
             </ul>
-            <p>© 2023 HAPPY NUTS DAY</p>
+            <p class="copyright">© 2023 HAPPY NUTS DAY</p>
         </div>
     </footer>
-    
 </body>
-</html>`
+</html>

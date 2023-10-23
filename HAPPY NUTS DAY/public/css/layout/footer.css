@@ -1,0 +1,138 @@
+.main-footer {
+    margin-top: auto;
+}
+
+.top-footer,.bottom-footer{
+    padding: 0 var(--layout-padding);
+}
+
+.main-footer > hr {
+    margin: 2rem 0;
+}
+
+.main-footer > :last-child {
+    padding-bottom: 3rem;
+}
+
+.logo{
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.top-footer > .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.contact > .info {
+    font-size: 1.4rem;
+}
+
+.contact > .media > ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.bottom-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link {
+    display: flex;
+    list-style: none;
+}
+
+.footer-link > li {
+    margin-right: 2rem;
+}
+
+.footer-link a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+/* RWD */
+/* notepad */
+@media screen and (max-width: 834px) {
+    /* footer */
+    .main-footer {
+        border-top: 1px solid rgb(0, 0, 0, 0.1);
+        font-weight: 550;
+    }
+
+    .top-footer{
+        padding-top: 4rem;
+    }
+
+    /* .logo{
+        display: block;
+        margin-bottom: 2rem;
+    } */
+
+    .top-footer > .logo {
+        height: 1.7rem;
+    }
+
+    .top-footer > .logo > img {
+        height: 100%;
+    }
+
+    .top-footer > .contact {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* .top-footer > .info > p {
+        margin-bottom: 6rem;
+    } */
+
+    .media {
+        margin-bottom: 6rem;
+    }
+
+    .media > ul > li {
+        width: 1.8rem;
+    }
+
+    .main-footer > hr {
+        display: none;
+    }
+
+    .bottom-footer {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom-footer > .footer-link {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 30.4rem;
+        margin-bottom: 5rem;
+        font-size: 1.3rem;
+        gap: 0.5rem;
+       
+    }
+
+    .copyright {
+        font-size: 1.1rem
+    }
+}
+
+/* phone */
+@media screen and (max-width: 414px){
+
+    
+}
