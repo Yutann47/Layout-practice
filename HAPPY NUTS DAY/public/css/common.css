@@ -1,5 +1,6 @@
 @import url(./layout/header.css);
 @import url(./layout/side-nav.css);
+@import url(./side-bar.css);
 @import url(./layout/footer.css);
 @import url(./utils.css);
 
@@ -48,28 +49,37 @@ a{
     padding: 4rem;
 }
 
-.show-only-pc {
-    display: none;
-}
 
 .show-only-md {
     display: none;
 }
 
-.text-lg {
+.text-lg {/*個人様向けギフト title用*/
+    font-size: 2.2rem;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+
+.text-md {
     font-size: 1.8rem;
     letter-spacing: 0.36px;
     line-height: 22px;
 }
 
-.text-list-lg {
+.text-sm {/*內文用*/
+    font-size: 1.7rem;
+    letter-spacing: 0.3em;
+    line-height: 28px;
+}
+
+.text-list {
     font-size: 1.6rem;
 }
 
 .btn {
     display: inline-flex;
     gap: 1rem;
-    /* align-items: center; */
+    align-items: center;
     border: 1px solid var(--color-primary);
     border-radius: 9999px; 
     padding: 1.2rem 3rem;
@@ -144,6 +154,12 @@ a{
         padding: 0.8rem 1.5rem;
         font-size: 1.3rem;
     }
+    
+    /* M版 text和 phone版相同 */
+    .text-lg {
+        font-size: 2rem;
+        line-height: 28px;
+    }
 
     .text-md {
         font-size: 1.4rem;
@@ -151,7 +167,13 @@ a{
         line-height: 1.4rem;
     }
 
-    .text-list-md {
+    .text-sm {
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: 26px;
+    }
+
+    .text-list {
         font-size: 1.3rem;
     }
     

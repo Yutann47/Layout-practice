@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .flex-center{
     display: flex;
     justify-content: space-between;
@@ -188,33 +189,37 @@ main{
     left: 60px;
 }
 
-.main-buttom{
+.main-buttom {
     color: #444;
     display: flex;
     align-items: flex-start;
 }
 
-
-.news{
-    margin-left: 300px;
+.main-buttom > .news {
+    width: 400px;
 }
 
-.news p {
+
+.news-content {
+    margin-left: 150px;
+}
+
+.news-content p {
     margin: 40px 0px 10px 0px;
     font-size: 14px;
 }
 
-.news p:nth-child(1){
+.news-content p:nth-child(1){
     margin: 0px;
 }
 
-.news h2 {
+.news-content h2 {
     font-size: 14px;
     line-height: 2;
     margin: 0px 0px 40px 0px ;
 
 }
-.news h2 a{
+.news-content h2 a{
     color: #444;
 }
 .hr-solid{

@@ -17,13 +17,13 @@
         <nav class="main-nav">
             <ul class="menu-list">
                 <li class="show-only-pc" ><a  href="">MY ACCOUNT</a></li>
-                <li class="text-list-md" ><a  href="">CART</a></li>
+                <li class="text-lg-list-md" ><a  href="">CART</a></li>
                 <li class="show-only-pc">
-                    <a class=".btn" href="" >
+                    <a class="btn" href="" >
                         ONLINE STORE
                         <img src="./public/image/cart.svg" alt="">
                     </a></li>
-                <li class="text-list-md">
+                <li class="text-lg-list-md">
                     <div class="btn">
                         MENU  
                         <i class="fa-solid fa-plus"></i>
@@ -35,8 +35,8 @@
         <nav class="side-nav">
             <div class="top-menu">
                 <ul class="menu menu-list">
-                    <li> <a class="text-list-md" href="">MY ACCOUNT</a></li>
-                    <li><a class="text-list-md" href="">CART</a></li>
+                    <li> <a class="text-lg-list-md" href="">MY ACCOUNT</a></li>
+                    <li><a class="text-lg-list-md" href="">CART</a></li>
                 </ul>
                 <button class="btn btn-black">
                     CLOSE  
@@ -76,17 +76,21 @@
     </header>
 
     <main class="container">
+
         <div class="side-bar">
-            <div class="lead">
-                <h1>GIFT SERVICE</h1>
-                <p>ALL <img src="./public/image/arrow.svg" alt=""></p>
+            <h1>GIFT SERVICE</h1>
+            <div class="lead-menu">
+                <button class="toggle-btn">ALL <img src="./public/image/arrow.svg" alt=""></button>
+                <div class="lead-list active">
+                    <ul class="menu-list">
+                        <li class="text-md" ><a href="">個人様向け</a></li>
+                        <li class="text-md" ><a href="">法人様向け / 大口注文</a></li>
+                        <li class="text-md" ><a href="">お問い合わせ</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="lead-list show-only-pc">
-                <li class="text-lg text-md" ><a href="">個人様向け</a></li>
-                <li class="text-lg text-md" ><a href="">法人様向け / 大口注文</a></li>
-                <li class="text-lg text-md" ><a href="">お問い合わせ</a></li>
-            </ul>
         </div>
+
     </main>
 
     <footer class="main-footer">
@@ -119,5 +123,15 @@
             <p class="copyright">© 2023 HAPPY NUTS DAY</p>
         </div>
     </footer>
+
+    <script>
+        const toggleMenuEl = document.querySelector(".lead-menu > .toggle-btn");
+        const menuEl = document.querySelector(".lead-menu > .lead-list");
+  
+        toggleMenuEl.addEventListener("click", () => {
+          menuEl.classList.toggle("active");
+        });
+      </script>
+
 </body>
 </html>

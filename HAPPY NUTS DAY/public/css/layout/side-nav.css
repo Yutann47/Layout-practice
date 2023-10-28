@@ -129,11 +129,13 @@
 /* phone */
 @media screen and (max-width: 414px){
     .side-middle {
-        padding: 0;
+        padding: 0 3rem;
     }
 
     .sub-menu {
         margin-bottom: 23rem;
     }
+
+    
     
 }
